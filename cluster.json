@@ -1,0 +1,13 @@
+{
+    "apps": [{
+        "name": "app",
+        "script": "app.js",
+        "args": ["--port=4001"],
+        "merge_logs": true,
+    }, {
+        "name": "app",
+        "script": "app.js",
+        "args": ["--port=4002"],
+        "merge_logs": true,
+    }]
+}

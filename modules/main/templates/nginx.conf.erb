@@ -7,7 +7,7 @@ server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
 
-	root /var/www/html;
+	root <%= scope.lookupvar('settings::modulepath').split('/')[0 .. -2].join('/') %>;
 
 	index index.html index.htm;
 

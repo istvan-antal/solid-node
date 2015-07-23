@@ -10,7 +10,7 @@ node default {
 
     file { "/etc/nginx/sites-available/default":
         require => Package["nginx"],
-        source  => "puppet:///modules/main/nginx.conf",
+        content  => template('main/nginx.conf.erb'),
         notify  => Service["nginx"]
     }
 

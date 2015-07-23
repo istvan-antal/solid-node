@@ -7,7 +7,7 @@ Type=forking
 User=developer
 WorkingDirectory=<%= scope.lookupvar('settings::modulepath').split('/')[0 .. -2].join('/') %>
 
-ExecStart=/usr/local/lib/node_modules/pm2/bin/pm2 start /home/developer/blueprint/modules/../cluster.json
+ExecStart=/usr/local/lib/node_modules/pm2/bin/pm2 start <%= scope.lookupvar('settings::modulepath').split('/')[0 .. -2].join('/') %>/cluster.json
 ExecReload=/usr/local/lib/node_modules/pm2/bin/pm2 reload all
 ExecStop=/usr/local/lib/node_modules/pm2/bin/pm2 kill
 

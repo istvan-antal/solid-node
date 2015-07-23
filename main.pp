@@ -37,7 +37,7 @@ node default {
 
     exec { "install_node":
         require => Package[["build-essential", "openssl", "libssl-dev", "pkg-config"]],
-        command => "${settings::modulepath}/main/install_node.sh",
+        command => "${settings::modulepath}/main/install_node.sh v0.12.7",
         creates => "/usr/local/bin/node",
         logoutput => true,
         timeout => 1800
